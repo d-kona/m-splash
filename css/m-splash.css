@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+
+/* --- body --- */
+html, body {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin:0;
+  padding:0;
+  border:0 none;
+  outline:0;
+}
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none;
+}
+html {font-size: 100%;}
+body {
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.01em;
+  font-family: "Pretendard-Regular", "Roboto", "Helvetica Neue", Helvetica, Sans-serif;
+  color: #222;
+  background-color: #fff;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.wrap {
+  position: relative;
+  height: calc(100vh - 60px);
+  font-size: 16px;
+}
+
+
+/* --- 스플래시 --- */
+.wrap.start {height: auto;}
+.wrap.start .splash {
+  overflow: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin-top: -5vh;
+}
+.wrap.start .splash .logo-area {
+  overflow: inherit;
+  position: relative;
+  width: 12em;
+}
+.wrap.start .splash #svg-line {
+  overflow: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.wrap.start .splash .svg-fill {
+  overflow: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.wrap.start .splash .svg-fill.is-active {opacity: 1;}
